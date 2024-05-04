@@ -60,4 +60,26 @@
         }
         echo "</pre>";
     }
+
+    // Ex5
+
+    function calcularFatorial ($numero) {
+        $fatorial = 1;
+        for($i = 1; $i <= $numero; $i++) {
+            $fatorial *= $i;
+        }
+        return $fatorial;
+    }
+
+    // Ex6 
+    
+    function ordemCrescente($valor1, $valor2) {
+        if ($valor1 == $valor2) {
+            $resultado = "Números iguais: $valor1";
+        } else {
+            $resultado = $valor1 > $valor2 ? "$valor2, $valor1" : "$valor1, $valor2";
+        }
+    
+        return $resultado;
+    }
 ?>
