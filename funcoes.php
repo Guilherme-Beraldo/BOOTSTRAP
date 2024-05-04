@@ -72,7 +72,7 @@
     }
 
     // Ex6 
-    
+
     function ordemCrescente($valor1, $valor2) {
         if ($valor1 == $valor2) {
             $resultado = "Números iguais: $valor1";
@@ -82,4 +82,57 @@
     
         return $resultado;
     }
+
+    // Ex7
+
+    function converter ($metros) {
+        $centimetros = $metros * 100;
+    
+        echo "$centimetros ctm";
+    }
+
+    // Ex8
+
+    function tintas ($metros) {
+        $qtdlitros = $metros / 3;
+        $qtdlatas = ceil($qtdlitros / 18);
+        $valortotal = $qtdlatas * 80;
+    
+        return [$qtdlatas, $valortotal];
+    }
+
+    // Ex9
+
+    function verificarIdade ($ano) {
+        define ("anoAtual", 2024);
+        $idadePessoa = anoAtual - $ano;
+        $dias = $idadePessoa * 365;
+        $futuro = $idadePessoa + 1;
+    
+        echo "Você tem $idadePessoa anos, viveu $dias dias, e em 2025 você fará $futuro anos!";
+    }
+
+    // Ex10
+
+    function calcularImc ($peso, $altura) {
+        $imc = $peso / ($altura * $altura);
+     
+        if ($imc < 18.5) {
+          echo "Você esta abaixo do peso ideal para sua altura";
+        } elseif ($imc >= 18.5 && $imc < 24.9) {
+         echo "Você esta com o peso ideal para a sua altura";
+        } elseif ($imc >= 25 && $imc < 29.9) {
+         echo "Você esta acima do peso ideal para a sua altura";
+        } elseif ($imc >= 30 && $imc < 34.9) {
+         echo "Você esta com obesidade grau 1";
+        }
+        elseif ($imc >= 35 && $imc < 39.9) {
+         echo "Você esta com obesidade grau 2";
+        }
+        elseif ($imc >= 40) {
+         echo "Você esta com obesidade grau 3, recomendamos consultar um nutricionista!";
+        } else {
+         echo "números digitados inválidos";
+        }
+     }
 ?>
